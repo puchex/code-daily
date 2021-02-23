@@ -1,0 +1,26 @@
+							Normalization
+							
+* To reduce data redundancy and improve data integrity.
+
+Update Anamoly :  Same information may be stored in many rows and while updating data this leads to inconsistencies.
+
+Insertion Anamoly : While inserting data where attributes cannot be recored. This leads to storing many null values which is a wastage.
+
+Deletion Anamoly : Deleting some data may completely delete some other unrelated data.
+
+
+	If a relation schema is in BCNF then all redundancy based on functional dependency has been removed.
+	
+R is in BCNF iff for each of its dependencies X -> Y , atleast one of the following conditons hold,
+	
+	# X -> Y is a trivial functional dependency ( Y subset of X )
+	
+	# x is a superkey for schema R.
+	
+	(Super Key - set of attributes within a table whose values can be used to uniquely identify a tuple 
+	Candidate Key is a minimal set of attributes necessary to identify a tuple -- Minimal Superkey)
+
+Non-prime attribute - that does noot occur in any candidate key
+
+2NF :
+	relation is in 2NF if it is in 1NF  AND every non-prime attribute of the relation is dependent on the whole of every candidate key.
